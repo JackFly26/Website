@@ -1,0 +1,31 @@
+#bg1 {
+  background-image: url('data/download.jpg');
+  background-size: cover;
+}
+.container {
+  background-color: #e9ecef;
+}
+p {
+    text-indent: 40px;
+}
+h6 {
+    padding-left: 30px;
+    color: #b4b4b4;
+}
+img {
+  width: 100%;
+  height: auto;
+  visibility: hidden;
+}
+@media(max-width: 480px){
+  h1 {
+    font-size: 48pt;
+  }
+  h6 {
+    font-size: 36pt;
+    padding-left: 60px;
+  }
+  p {
+    font-size: 24pt;
+  }
+}
