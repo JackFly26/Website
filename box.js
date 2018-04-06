@@ -1,4 +1,4 @@
-var spinningbox = function ( sketch ){
+var spinningbox = function(sketch) {
   var osc, fft;
   sketch.setup = function() {
     var canvas = sketch.createCanvas(500, 500, sketch.WEBGL);
@@ -14,9 +14,9 @@ var spinningbox = function ( sketch ){
   let angle = 0;
   let i = 0;
   let sound = false;
-  sketch.draw = function(){
-    if( $("#box").css('display') != 'none') {
-      if (!sound){
+  sketch.draw = function() {
+    if ($("#box").css('display') != 'none') {
+      if (!sound) {
         osc.start();
         sound = true;
       }
@@ -34,7 +34,7 @@ var spinningbox = function ( sketch ){
       sketch.box(sketch.map(sketch.mouseX, 0, sketch.width, 50, 100, true));
       if (i >= waveform.length - 1) {
         i = 0
-      } else{
+      } else {
         i++
       }
     }

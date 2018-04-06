@@ -1,12 +1,11 @@
-
-var circlepacking = function ( sketch ){
+var circlepacking = function(sketch) {
   var circles;
   var img;
   var active = false;
-  sketch.startDraw = function(){
+  sketch.startDraw = function() {
     active = true;
   }
-  sketch.endDraw = function(){
+  sketch.endDraw = function() {
     active = false;
   }
 
@@ -33,7 +32,7 @@ var circlepacking = function ( sketch ){
 
 
   sketch.draw = function() {
-    if(active == true) {
+    if (active == true) {
       sketch.background(0);
 
       var total = 10;
@@ -97,9 +96,9 @@ var circlepacking = function ( sketch ){
       if (valid) {
         var index = (sketch.int(x) + sketch.int(y) * img.width) * 4;
         var r = img.pixels[index];
-        var g = img.pixels[index+1];
-        var b = img.pixels[index+2];
-        var c = sketch.color(r,g,b);
+        var g = img.pixels[index + 1];
+        var b = img.pixels[index + 2];
+        var c = sketch.color(r, g, b);
         return new Circle(x, y, sketch.color(c));
       } else {
         return null;

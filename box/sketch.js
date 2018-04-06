@@ -1,4 +1,5 @@
 var osc, fft;
+
 function setup() {
   var canvas = createCanvas(500, 500, WEBGL);
   camera(-100, -100, 100, 0, 0, 0, 0, 1, 0);
@@ -11,6 +12,7 @@ function setup() {
 }
 let angle = 0;
 let i = 0;
+
 function draw() {
   let waveform = fft.waveform();
   var locX = mouseX - width / 2;
@@ -26,7 +28,7 @@ function draw() {
   box(map(mouseX, 0, width, 50, 100, true));
   if (i >= waveform.length - 1) {
     i = 0
-  } else{
+  } else {
     i++
   }
 }

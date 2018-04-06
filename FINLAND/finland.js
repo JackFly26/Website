@@ -1,8 +1,10 @@
 let scl, limit, moosic, x;
-function preload(){
+
+function preload() {
   moosic = loadSound('United_States_Navy_Band_-_Maamme.ogg.mp3')
 }
-function setup(){
+
+function setup() {
   var cnv = createCanvas(720, 440);
   cnv.parent('parent');
   background(0);
@@ -12,9 +14,10 @@ function setup(){
   moosic.play();
   moosic.loop();
 }
-function draw(){
+
+function draw() {
   background(0);
-  x+= 0.1;
+  x += 0.1;
   scl = map(sin(x), 0, 1, 0, limit);
   fill(255);
   rect(0, 0, scl * 18, scl * 11);

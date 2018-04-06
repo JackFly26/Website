@@ -3,40 +3,64 @@ let slider;
 let obj = [];
 let yeet;
 let script = [];
-function preload(){
-  script = loadStrings("entire_bee_movie_script.txt");
+let load = false;
+
+function loaded(result) {
+
+  script = split(result[0], " ");
+  console.log(script.length);
+  for (var i = 0; i < script.length; i++) {
+    obj.push(new Text(i));
+  }
+  load = true;
 }
+
+function error(err) {
+  console.log(err);
+}
+
+function percent(percent) {
+  console.log(percent);
+}
+
 function setup() {
-  script = split(script[0], " ");
-  console.log(script);
+
+  loadStrings("entire_bee_movie_script.txt", loaded, error, percent);
   createCanvas(400, 400);
   //inp = createInput('yeet')
   slider = createSlider(12, 72, 72, 10);
-  for(var i = 0; i < script.length; i++){
-    obj.push(new Text(i));
-  }
+
+  textFont('Comic Sans MS');
 }
 
 function draw() {
-
-  background(random(255), random(255), random(255))
-  //console.log(yeet);
-  for(let i  = 0; i < obj.length; i++){
-    obj[i].update(script[i], height / 2);
+  if (loaded) {
+    textSize(slider.value());
+    background(random(255), random(255), random(255))
+    //console.log(yeet);
+    for (let i = 0; i < obj.length; i++) {
+      obj[i].update(script[i], height / 2);
+      obj[i].x = obj[i].getX(i);
+    }
   }
 }
+
 function Text(i) {
-  this.update = function(val, y){
-    var offset = 0;
-    textFont('Comic Sans MS', slider.value());
+  var offset = 0;
+  var x = 0;
+  // this.load = function(){
+  //   x = this.getX(i);
+  // }
+  this.update = function(val, y) {
     fill(random(255), random(255), random(255));
-    text(val, this.getX(i)+offset, y);
-    offset++;
+    text(val, this.x + offset, y);
+    //console.log(x);
+    offset--;
   }
-  this.getX = function(value){
-    if(value != 0){
+  this.getX = function(value) {
+    if (value != 0) {
       return textWidth(script[value - 1]) + 10 + this.getX(value - 1);
-    } else{
+    } else {
       return 0;
     }
   }
