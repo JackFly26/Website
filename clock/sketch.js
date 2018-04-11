@@ -4,7 +4,6 @@ let cnv;
 let nums;
 
 function setup() {
-  first = millis();
   cnv = createCanvas(400, 400);
   cnv.parent('canvas')
   cnv.mouseOver(function() {
