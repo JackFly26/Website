@@ -1,3 +1,4 @@
+// use these colors: https://color.adobe.com/Cartoon-Network-Check-It-color-theme-6815491/
 let p;
 let first;
 let cnv;
