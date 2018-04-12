@@ -27,12 +27,12 @@ function draw() {
   var m = minute();
   var s = new Date().getMilliseconds() / 1000 + second();
   strokeWeight(10);
-  stroke(255, 0, 0);
+  stroke(237, 11, 145);
   noFill();
-  arc(0, 0, width - spacing, height - spacing, 0, h * TWO_PI / 12);
-  stroke(0, 255, 0);
-  arc(0, 0, width - 2 * spacing, height - 2 * spacing, 0, m * TWO_PI / 60);
-  stroke(0, 0, 255);
+  arc(0, 0, width - spacing, height - spacing, 0, h * TWO_PI / 12 + m * TWO_PI / 720);
+  stroke(0, 179, 242);
+  arc(0, 0, width - 2 * spacing, height - 2 * spacing, 0, m * TWO_PI / 60 + floor(s) * TWO_PI / 3600);
+  stroke(240, 229, 2);
   arc(0, 0, width - 3 * spacing, height - 3 * spacing, 0, s * TWO_PI / 60);
   textAlign(CENTER, CENTER);
   fill(255);
