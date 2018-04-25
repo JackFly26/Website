@@ -51,6 +51,20 @@ http.createServer(function(req, res) {
           res.end();
         }
       });
+    } else if (req.url.split("/").length > 1) {
+      fs.readFile(req.url.replace(/\//, '') + "/index.html", function(err, data) {
+          if (err) {
+            console.log(err);
+            else {
+              res.writeHead(200, {
+                'Content-Type': 'text/html'
+              });
+              console.log('html');
+              res.write(data);
+              res.end();
+            }
+          });
+      }
     } else {
       fs.readFile('index.html', function(err, data) {
         if (err) throw err;
