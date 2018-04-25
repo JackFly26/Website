@@ -9,7 +9,7 @@ class Cube {
   }
 
   update() {
-    this.y = map(atan(this.angle + this.offset), -1, 1, this.size / 2, height - this.size / 2);
+    this.y = map(sin(this.angle + this.offset), -1, 1, this.size / 2, height - this.size / 2);
     this.angle += 0.05;
   }
 
