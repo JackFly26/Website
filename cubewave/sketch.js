@@ -1,7 +1,6 @@
 var cam;
 var cubes = [];
 var spacing = 100;
-var cam;
 var nums;
 
 function setup() {
