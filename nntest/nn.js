@@ -12,11 +12,19 @@ function NeuralNetwork(numIn, numHid, numOut) {
   this.bias_o = new Matrix(this.output_nodes, 1).randomize();
 }
 NeuralNetwork.prototype.feedforward = function(inputs) {
+<<<<<<< HEAD
   let input;
   if (inputs instanceof Matrix) {
     input = inputs;
   } else {
     input = Matrix.fromArray(inputs);
+=======
+  let input
+  if (!(inputs instanceof Matrix)) {
+    input = Matrix.fromArray(input);
+  } else {
+    input = inputs;
+>>>>>>> 8143aeab299ce493b95f3f4310e5cb24448ddbb0
   }
   let hidden = Matrix.multiply(this.weights_ih, input);
   hidden.add(this.bias_h);
@@ -24,8 +32,12 @@ NeuralNetwork.prototype.feedforward = function(inputs) {
   let output = Matrix.multiply(this.weights_ho, hidden);
   output.add(this.bias_o);
   output.map(sigmoid);
+<<<<<<< HEAD
   return output.toArray();
 }
 NeuralNatwork.prototype.train = function(inputs, answer) {
 
+=======
+  return output;
+>>>>>>> 8143aeab299ce493b95f3f4310e5cb24448ddbb0
 }
