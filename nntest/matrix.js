@@ -18,10 +18,15 @@ Matrix.prototype.fill = function(n) {
   }
   return this;
 }
+Matrix.fromArray = function(arr) {
+  let m = new Matrix(arr.length, 1);
+  m.map((val, i, j) => arr[i])
+  return m;
+}
 Matrix.prototype.randomize = function() {
   for (let i = 0; i < this.rows; i++) {
     for (let j = 0; j < this.cols; j++) {
-      this.data[i][j] = Math.floor(Math.random() * 10);
+      this.data[i][j] = Math.random() * 2 - 1;
     }
   }
   return this;
@@ -154,7 +159,7 @@ Matrix.prototype.map = function(fn) {
   for (let i = 0; i < this.rows; i++) {
     for (let j = 0; j < this.cols; j++) {
       let val = this.data[i][j];
-      this.data[i][j] = fn(val);
+      this.data[i][j] = fn(val, i, j);
     }
   }
   return this;
