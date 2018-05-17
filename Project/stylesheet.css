@@ -14,6 +14,6 @@ table, th, td {
 th, td {
   padding: 5px;
 }
-p, th, td {
+p, th, td, h1, h3 {
   font-family: sans-serif;
 }
