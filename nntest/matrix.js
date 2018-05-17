@@ -121,6 +121,26 @@ Matrix.prototype.add = function(n) {
   }
   return this;
 }
+Matrix.subtract = function(a, b) {
+  let results;
+  if (b instanceof Matrix) {
+    a.broadcast(b);
+    results = new Matrix(a.rows, a.cols);
+    for (let i = 0; i < a.rows; i++) {
+      for (let j = 0; j < a.cols; j++) {
+        results.data[i][j] = a.data[i][j] - b.data[i][j];
+      }
+    }
+  } else {
+    results = new Matrix(a.rows, a.cols);
+    for (let i = 0; i < this.rows; i++) {
+      for (let j = 0; j < this.cols; j++) {
+        results.data[i][j] = this.data[i][j] - b;
+      }
+    }
+  }
+  return results;
+}
 Matrix.prototype.log = function() {
   console.table(this.data);
 }
@@ -173,11 +193,21 @@ Matrix.prototype.map = function(fn) {
   }
   return this;
 }
-Matrix.prototype.transpose = function() {
-  let result = new Matrix(this.cols, this.rows);
-  for (let i = 0; i < this.rows; i++) {
-    for (let j = 0; j < this.cols; j++) {
-      result.data[j][i] = this.data[i][j];
+Matrix.map = function(m, fn) {
+  let result = new Matrix(m.rows, m.cols);
+  for (let i = 0; i < m.rows; i++) {
+    for (let j = 0; j < m.cols; j++) {
+      let val = m.data[i][j];
+      result.data[i][j] = fn(val, i, j);
+    }
+  }
+  return result;
+}
+Matrix.transpose = function(a) {
+  let result = new Matrix(a.cols, a.rows);
+  for (let i = 0; i < a.rows; i++) {
+    for (let j = 0; j < a.cols; j++) {
+      result.data[j][i] = a.data[i][j];
     }
   }
   return result;
