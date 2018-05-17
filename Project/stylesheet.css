@@ -1,8 +1,8 @@
 .box {
-  display: inline-block;
   padding: 10;
   width: 300;
 }
-p {
-  
+#parent {
+  display: inline-flex;
+  flex-wrap: wrap;
 }
