@@ -1,35 +1,60 @@
 <!DOCTYPE html5>
 <html>
-  <head>
-    <title>Samsung Project</title>
-    <!--<link rel="stylesheet" href="stylesheet.css">-->
-  </head>
-  <!--Why are you here?-->
-  <body>
-    <header role="banner">
-      <h2>Samsung Report</h2>
-    </header>
-    <div class="box">
-      <h3>Start</h3>
-      <p>
-        Samsung was founded in 1938 as a trading company. It was based in Taegu, Korea. Samsung was originally a grocery store.
-        Its founder was Lee Byung-chull. It expanded to Seoul but left when the Korean War broke out. 
-        Lee branched out and made a sugar refinery, a textile industry, and a woolen mill. When this proved sucessful, Samsung quickly started diversifying.
-      </p>
-    </div>
-    <div class="box">
-      <h3>Venture into Electronics</h3>
-      <p>
-        Samsung started into the electronics industry in the 1960's, starting many divisions. The initial facilities were in Suwon, South Korea. 
-        It started producing black and white TV's in 1970. In the 70's, Samsung began selling washing machines. In 1977, they started making color televisions. 
-        In 1980, Samsung started producing AC units. Samsung first went overseas in Portugal in 1982. In 1984, Samsung exported its first VCRs to the US. Its sales also exceeded 1 million won (927.59 USD).
-      </p>
-    </div>
-    <div class="box">
-      <h3>Making Computers</h3>
-      <p>
-        Samsung started doing telecommunications in 1980. In 1983, Samsung began manufacturing personal computers. In 1991, Samsung developed its first mobile handset. In 1992, it developed a mobile phone system, the worlds first 64M DRAM, and over 10 million industrial robots. Samsung also began manufacturing in China.
-      </p>
-    </div>
-  </body>
+
+<head>
+  <script>
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF'.split('');
+      var classes = document.getElementsByClassName('box');
+      for (var j = 0; j < classes.length; j++) {
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.round(Math.random() * 15)];
+        }
+        classes[j].style.cssText = "background-color: " + color;
+      }
+    }
+  </script>
+  <title>Samsung Project</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<!--Why are you here?-->
+
+<body>
+  <header role="banner">
+    <h2>Samsung Report</h2>
+  </header>
+  <div class="box">
+    <h3>Start</h3>
+    <p>
+      Samsung was founded in 1938 as a trading company. It was based in Taegu, Korea. Samsung was originally a grocery store. Its founder was Lee Byung-chull. It expanded to Seoul but left when the Korean War broke out. Lee branched out and made a sugar refinery,
+      a textile industry, and a woolen mill. When this proved sucessful, Samsung quickly started diversifying.
+    </p>
+  </div>
+  <div class="box">
+    <h3>Venture into Electronics</h3>
+    <p>
+      Samsung started into the electronics industry in the 1960's, starting many divisions. The initial facilities were in Suwon, South Korea. It started producing black and white TV's in 1970. In the 70's, Samsung began selling washing machines. In 1977, they
+      started making color televisions. In 1980, Samsung started producing AC units. Samsung first went overseas in Portugal in 1982. In 1984, Samsung exported its first VCRs to the US. Its sales also exceeded 1 million won (927.59 USD).
+    </p>
+  </div>
+  <div class="box">
+    <h3>Making Computers</h3>
+    <p>
+      Samsung started doing telecommunications in 1980. In 1983, Samsung began manufacturing personal computers. In 1991, Samsung developed its first mobile handset. In 1992, it developed a mobile phone system, the worlds first 64M DRAM, and over 10 million
+      industrial robots. Samsung also began manufacturing in China.
+      In 1993, Samsung made the first DVD-R.
+    </p>
+  </div>
+  <div class="box">
+    <h3>Going Global</h3>
+    <p>
+      
+    </p>
+  </div>
+  <script>
+    getRandomColor();
+  </script>
+</body>
+
 </html>
