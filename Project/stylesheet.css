@@ -59,6 +59,9 @@ header {
     ), url(philosophy.jpeg);
   background-size: cover;
 }
+#box8 {
+  width: 500px;
+}
 /*#parent {
   display: inline-flex;
   flex-wrap: wrap;
