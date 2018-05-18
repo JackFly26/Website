@@ -1,5 +1,9 @@
 .box {
+<<<<<<< HEAD
   //display: inline-block;
+=======
+  margin: 10;
+>>>>>>> be3398f288948cec029c1c9176845bdd4820a927
   padding: 10;
   //width: 25vw;
   //height: 25vw;
@@ -8,6 +12,7 @@
   display: inline-flex;
   flex-wrap: wrap;
 }
+<<<<<<< HEAD
 p {
 
 }
@@ -15,4 +20,19 @@ header {
   background-color: darkblue;
   text-align: center;
   color: white;
+=======
+#parent {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+p, th, td, h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif;
+>>>>>>> be3398f288948cec029c1c9176845bdd4820a927
 }

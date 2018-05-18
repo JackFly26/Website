@@ -1,0 +1,54 @@
+<html>
+
+<head>
+  <script>
+    function getRandomColor() {
+      var letters = '0123456789ABCDEF'.split('');
+      var classes = document.getElementsByClassName('box');
+      for (var j = 0; j < classes.length; j++) {
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.round(Math.random() * 15)];
+        }
+        classes[j].style.cssText = "background-color: " + color;
+      }
+    }
+  </script>
+  <title>Samsung Project</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<!--Why are you here?-->
+
+<body>
+  <header role="banner">
+    <h2>Samsung Report</h2>
+  </header>
+  <div id="parent">
+  <div class="box">
+    <h3>Tech Specs</h3>
+    <table>
+      <tr>
+        <th>Devices</th>
+        <th>Galaxy S9</th>
+      </tr>
+      <tr>
+        <th>Processor Speed</th>
+        <td>2.8GHz,1.7GHz</td>
+      </tr>
+      <tr>
+        <th>Display Resolution</th>
+        <td>2960 x 1440</td>
+      </tr>
+      <tr>
+        <th>Color Depth</th>
+        <td>16M</td>
+      </tr>
+    </table>
+  </div>
+  </div>
+  <script>
+    getRandomColor();
+  </script>
+</body>
+
+</html>
