@@ -3,6 +3,7 @@
 
 <head>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
   <script>
     function getRandomColor() {
       var letters = '0123456789ABCDEF'.split('');
@@ -25,30 +26,29 @@
   <header role="banner">
     <h2>Samsung Report</h2>
   </header>
-<<<<<<< HEAD
-  <div class="parent">
-    <div class="box">
+  <div id="parent">
+    <div class="box" id="box1">
       <h3>Start</h3>
       <p>
         Samsung was founded in 1938 as a trading company. It was based in Taegu, Korea. Samsung was originally a grocery store. Its founder was Lee Byung-chull. It expanded to Seoul but left when the Korean War broke out. Lee branched out and made a sugar refinery,
         a textile industry, and a woolen mill. When this proved sucessful, Samsung quickly started diversifying.
       </p>
     </div>
-    <div class="box">
+    <div class="box" id="box2">
       <h3>Venture into Electronics</h3>
       <p>
         Samsung started into the electronics industry in the 1960's, starting many divisions. The initial facilities were in Suwon, South Korea. It started producing black and white TV's in 1970. In the 70's, Samsung began selling washing machines. In 1977, they
         started making color televisions. In 1980, Samsung started producing AC units. Samsung first went overseas in Portugal in 1982. In 1984, Samsung exported its first VCRs to the US. Its sales also exceeded 1 million won (927.59 USD).
       </p>
     </div>
-    <div class="box">
+    <div class="box" id="box3">
       <h3>Making Computers</h3>
       <p>
         Samsung started doing telecommunications in 1980. In 1983, Samsung began manufacturing personal computers. In 1991, Samsung developed its first mobile handset. In 1992, it developed a mobile phone system, the worlds first 64M DRAM, and over 10 million
         industrial robots. Samsung also began manufacturing in China. In 1993, Samsung made the first DVD-R.
       </p>
     </div>
-    <div class="box">
+    <div class="box" id="box4">
       <h3>Changing the Tech World</h3>
       <p>
         In 1997, Samsung became a worldwide Olympic partner. In 1998, they developed a flat-screen TV. In 1999, Samsung created a wireless internet phone and launched the first MP3 mobile phone. In 2001, they made the World Cyber Games. In 2002, they signed a
@@ -57,41 +57,65 @@
 
       </p>
     </div>
-=======
-  <div id="parent">
-  <div class="box">
-    <h3>Start</h3>
-    <p>
-      Samsung was founded in 1938 as a trading company. It was based in Taegu, Korea. Samsung was originally a grocery store. Its founder was Lee Byung-chull. It expanded to Seoul but left when the Korean War broke out. Lee branched out and made a sugar refinery,
-      a textile industry, and a woolen mill. When this proved sucessful, Samsung quickly started diversifying.
-    </p>
-  </div>
-  <div class="box">
-    <h3>Venture into Electronics</h3>
-    <p>
-      Samsung started into the electronics industry in the 1960's, starting many divisions. The initial facilities were in Suwon, South Korea. It started producing black and white TV's in 1970. In the 70's, Samsung began selling washing machines. In 1977, they
-      started making color televisions. In 1980, Samsung started producing AC units. Samsung first went overseas in Portugal in 1982. In 1984, Samsung exported its first VCRs to the US. Its sales also exceeded 1 million won (927.59 USD).
-    </p>
-  </div>
-  <div class="box">
-    <h3>Making Computers</h3>
-    <p>
-      Samsung started doing telecommunications in 1980. In 1983, Samsung began manufacturing personal computers. In 1991, Samsung developed its first mobile handset. In 1992, it developed a mobile phone system, the worlds first 64M DRAM, and over 10 million
-      industrial robots. Samsung also began manufacturing in China.
-      In 1993, Samsung made the first DVD-R.
-    </p>
-  </div>
-  <div class="box">
-    <h3>Going Global</h3>
-    <p>
-      
-    </p>
->>>>>>> be3398f288948cec029c1c9176845bdd4820a927
-  </div>
+    <div class="box" id="box5">
+      <h3>Tech Specs</h3>
+      <table>
+        <tr>
+          <th>Devices</th>
+          <th>Galaxy S9</th>
+          <th>Galaxy Note 8</th>
+          <th>Galaxy J7 Prime</th>
+          <th>Galaxy Tab S3</th>
+        </tr>
+        <tr>
+          <th>Processor Speed</th>
+          <td>2.8GHz,1.7GHz</td>
+          <td>2.35GHz</td>
+          <td>1.6GHz</td>
+          <td>2.15GHz,1.6GHz</td>
+        </tr>
+        <tr>
+          <th>Display Resolution</th>
+          <td>2960 x 1440</td>
+          <td>2960 x 1440</td>
+          <td>1280 x 720</td>
+          <td>2048 x 1536</td>
+        </tr>
+        <tr>
+          <th>Camera Resolution</th>
+          <td>12MP</td>
+          <td>Dual 12MP</td>
+          <td>8MP</td>
+          <td>13MP</td>
+        </tr>
+      </table>
+    </div>
+    <div class="box" id="box6">
+      <h3>Predictions</h3>
+      <p>
+        Samsung will become the single largest provider of bombs to the U.S. military, due to its surplus of Galaxy Note 7s.
+        All jokes aside, Samsung will continue growing and eventually overtake Apple as the #1 smartphone vendor. It will continue to make advancements in technology.
+        It will eventually make devices that drastically reduce, if not eliminate, human physical labor. Samsung will eventually have a monopoly on phones, if Apple falls apart.
+      </p>
+    </div>
+    <div class="box" id="box7">
+      <h3>Samsung's Philosophy</h3>
+      <p>
+        In its core, Samsung's goal is to make society better through its technology.
+        Its five values are people, excellence, change, integrity, and co-prosperity. This means Samsung wants to be moral, forward-thinking, responsible, great at their jobs, and friendly.
+      </p>
+    </div>
   </div>
   <script>
-    getRandomColor();
-    $('.box').css("width", $('.box').height());
+    //getRandomColor();
+    $('#parent').masonry({
+      // options
+      itemSelector: '.box',
+      columnWidth: '.box',
+      gutter: 10,
+      stagger: 30
+    });
+    //$('.box').css("width", $('.box').css('height'));
   </script>
 </body>
 

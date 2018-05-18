@@ -1,32 +1,67 @@
+
 .box {
-<<<<<<< HEAD
-  //display: inline-block;
-=======
-  margin: 10;
->>>>>>> be3398f288948cec029c1c9176845bdd4820a927
+  margin-bottom: 10;
   padding: 10;
-  //width: 25vw;
+  width: 300px;
+  color: white;
+  background: gray;
   //height: 25vw;
 }
-.parent {
+#box1 {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ), url(grocery.jpg);
+  background-size: cover;
+}
+#box2 {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ), url(tv.jpg);
+  background-size: cover;
+}
+#box3 {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ), url(pc.jpg);
+  background-size: cover;
+}
+#box4 {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ), url(phone.jpg);
+  background-size: cover;
+}
+#box5 {
+  width: 500;
+}
+#box6 {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ), url(s7.jpg);
+  background-size: cover;
+}
+#box7 {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ), url(philosophy.jpeg);
+  background-size: cover;
+}
+/*#parent {
   display: inline-flex;
   flex-wrap: wrap;
-}
-<<<<<<< HEAD
-p {
-
-}
-header {
-  background-color: darkblue;
-  text-align: center;
+  //align-items: flex-start;
+}*/
+table {
   color: white;
-=======
-#parent {
-  display: inline-flex;
-  flex-wrap: wrap;
 }
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid white;
     border-collapse: collapse;
 }
 th, td {
@@ -34,5 +69,4 @@ th, td {
 }
 p, th, td, h1, h2, h3, h4, h5, h6 {
   font-family: sans-serif;
->>>>>>> be3398f288948cec029c1c9176845bdd4820a927
 }
